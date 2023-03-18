@@ -1,8 +1,9 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header/Header'
-import Carrossel from './components/Carrossel/Carrossel'
+import Header from './components/Header/Header';
+import ButtonV from "./components/Button/ButtonValdisnei";
+import Inicio from './pages/Inicio';
 
 function App() {
 
@@ -10,9 +11,10 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <div className="carrossel">
-          <Carrossel></Carrossel>
-        </div>
+        <Routes>
+          <Route path="/" element={<Inicio/>}/>
+        </Routes>
+        
       </Router>
     </div>
   )
