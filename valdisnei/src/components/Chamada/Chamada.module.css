@@ -1,0 +1,18 @@
+.Chamada {
+    height: 298px;
+    width: 100%;
+    background: var(--elementos_neutros_escuro);
+    box-shadow: inset 0px 0px 60px 70px rgba(0, 0, 0, 0.51);
+    color: black;
+}
+
+.Chamada img {
+    max-width: 95%;
+    box-sizing: border-box;
+    margin: 0 0.5em;
+}
+
+.Chamada h2{
+    max-width: 50%;
+    margin: 1em auto 0;
+}
