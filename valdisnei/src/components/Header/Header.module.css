@@ -1,6 +1,6 @@
 .Header {
     width: 100%;
-    height: 56px;
+    height: 66px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -11,17 +11,4 @@
     height: 40px;
     width: 40px;
     margin: auto 22% auto 10%;
-}
-
-.Header nav {
-    display: flex;
-    justify-content: space-evenly;
-    flex: auto;
-}
-.Header ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex: auto;
-    justify-content: space-evenly;
 }

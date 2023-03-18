@@ -1,6 +1,5 @@
 import styles from "./Header.module.css"
-import NavBarDefault from "../NavBar/NavBarDefault"
-import NavBarNeutra from "../NavBar/NavBarNeutra"
+import { NavBarNeutra, NavBarDefault} from "../NavBar/NavBarNeutra"
 
 export default function Header() {
     return (
