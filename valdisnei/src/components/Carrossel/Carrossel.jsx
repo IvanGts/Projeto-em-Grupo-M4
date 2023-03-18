@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import styles from './Carrossel.module.css';
-import nextButton from '../../assets/nextButton.svg';
-import prevButton from '../../assets/prevButton.svg';
+import nextButton from '../../assets/vectors/nextButton.svg';
+import prevButton from '../../assets/vectors/prevButton.svg';
 import './Carrossel.css';
 
 function Carrossel() {

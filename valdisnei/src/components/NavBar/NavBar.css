@@ -1,0 +1,28 @@
+.navbar {
+    background-color: var(--elementos_neutros_escuro);
+}
+
+
+.small {
+    display: flex;
+    align-items: center;
+    font-size: small;
+    white-space: nowrap;
+}
+
+.itens-direita {
+    align-items: center;
+}
+
+.navbar-toggler {
+    background-color: var(--elementos_neutros_escuro) !important;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1500px;
+    }
+    .itens-direita {
+        width: 20% !important;
+    }
+}

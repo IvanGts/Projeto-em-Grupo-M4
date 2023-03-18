@@ -1,9 +1,11 @@
 import styles from "./Header.module.css"
+import NavBarDefault from "../NavBar/NavBarDefault"
+import NavBarNeutra from "../NavBar/NavBarNeutra"
 
 export default function Header() {
     return (
         <header className={styles.Header}>
-            {/* Logo */}
+            {/* Logo
             <img src="" alt="Logo Valdisnei" className="logo" />
 
             <nav>
@@ -15,7 +17,9 @@ export default function Header() {
                     <li>CADASTRE-SE</li>
                     <li>Login</li>
                 </ul>
-            </nav>
+            </nav> */}
+
+            <NavBarNeutra />
         </header>
     )
 }
