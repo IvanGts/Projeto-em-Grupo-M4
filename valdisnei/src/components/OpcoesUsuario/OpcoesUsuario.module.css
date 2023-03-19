@@ -1,0 +1,37 @@
+.OverlayModal {
+    padding-bottom: 0.5em;
+    border-radius: 20px;
+}
+
+.OverlayModal h5, .OverlayModal span{
+    color: var(--leve_black);
+}
+
+.linha {
+    background-color: var(--elementos_neutros_claro);
+    width: 249px;
+    padding: 0.7em 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: large;
+}
+
+.linha a{
+    width: inherit;
+    
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
+
+.loginIcon {
+    background-image: url('../../assets/vectors/ic_sharp-arrow-circle-right.svg');
+    width: 40px;
+    height: 40px;
+
+    background-position: center;
+    background-size: contain;
+}
