@@ -1,24 +1,25 @@
 import styles from "./Header.module.css"
-import { NavBarNeutra, NavBarDefault} from "../NavBar/NavBarNeutra"
+import { NavBarNeutra, NavBarDefault, NavBarLogado } from "../NavBar/NavBar";
 
-export default function Header() {
+export default function Header({estaLogado, neutro}) {
+    // Verificar se o usuário está logado, ou se a página é neutra
+    const isLoggedIn = estaLogado;
+
+    function verificarEstaLogado() {
+        if (estaLogado && !neutro) {
+            return <NavBarLogado />
+        } else if (!estaLogado && !neutro) {
+            return <NavBarDefault />
+        } else {
+            return <NavBarNeutra />
+        }
+    }
+
     return (
         <header className={styles.Header}>
-            {/* Logo
-            <img src="" alt="Logo Valdisnei" className="logo" />
+            
+            {verificarEstaLogado()}
 
-            <nav>
-                <ul>
-                    <li>Música</li>
-                    <li>Filmes</li>
-                </ul>
-                <ul>
-                    <li>CADASTRE-SE</li>
-                    <li>Login</li>
-                </ul>
-            </nav> */}
-
-            <NavBarNeutra />
         </header>
     )
 }

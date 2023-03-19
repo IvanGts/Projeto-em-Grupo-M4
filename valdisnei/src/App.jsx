@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header estaLogado={false} neutro={true} />
         <Routes>
           <Route path="/" element={<Inicio/>}/>
         </Routes>

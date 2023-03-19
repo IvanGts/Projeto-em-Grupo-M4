@@ -1,7 +1,14 @@
 .navbar {
     background-color: var(--elementos_neutros_escuro);
+    justify-content: center;
+    transition: 0.5s;
 }
 
+.container {
+    background-color: var(--elementos_neutros_escuro);
+    border-radius: 11px;
+    transition: 0.5s;
+}
 
 .small {
     display: flex;
@@ -18,11 +25,24 @@
     background-color: var(--elementos_neutros_escuro) !important;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .container {
         max-width: 1500px;
     }
     .itens-direita {
         width: 20% !important;
     }
+}
+
+.nav-link {
+    color: #F5F5F5;
+    stroke: 0.2px solid #000000;
+}
+
+a img{
+    transition: 90ms;
+}
+
+a:hover img {
+    filter: invert();
 }
