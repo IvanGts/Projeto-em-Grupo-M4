@@ -1,5 +1,5 @@
 .navbar {
-    background-color: var(--elementos_neutros_escuro);
+    /* background-color: var(--elementos_neutros_escuro); */
     justify-content: center;
     transition: 0.5s;
 }

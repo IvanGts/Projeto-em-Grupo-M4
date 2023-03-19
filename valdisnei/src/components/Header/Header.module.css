@@ -5,6 +5,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+
+    background-color: var(--elementos_neutros_escuro);
 }
 
 .Header img {
