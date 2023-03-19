@@ -1,3 +1,4 @@
+import React, { useState, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,6 +7,7 @@ import logo from '../../assets/logo/logo.png';
 import login_box_fill from '../../assets/vectors/login-box-fill.svg';
 import user_profile from '../../assets/vectors/ui-user-profile.svg';
 import ToggleButton from "../ToggleButton/ToggleButton";
+import {OpcoesUsuario, OverlayModal} from "../OpcoesUsuario/OpcoesUsuario";
 import "./NavBar.css"
 
 function reduzirNavBar() {
@@ -57,6 +59,9 @@ export function NavBarNeutra() {
 }
 
 export function NavBarLogado() {
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
+
   return (
     <Navbar expand="md" fixed='top'>
       <Container className='mx-1'>
@@ -69,10 +74,13 @@ export function NavBarLogado() {
             <Nav.Link href="#link">Minha Biblioteca</Nav.Link>
           </Nav>
           <Nav className="justify-content-around mx-3 w-100 itens-direita">
-            <Nav.Link href="#link" className='d-flex align-items-center'><img src={user_profile} alt="Login" className='m-0 h-100'/></Nav.Link>
+            <Nav.Link href="" className='d-flex align-items-center' ref={target} onClick={() => setShow(!show)}><img src={user_profile} alt="Login" className='m-0 h-100 profile'/></Nav.Link>
+            {/* Para o caso da tela ser menor */}
+            <OpcoesUsuario className="optResponsivo"/>
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <OverlayModal show={show} setTarget={target} /> 
     </Navbar>
   );
 }

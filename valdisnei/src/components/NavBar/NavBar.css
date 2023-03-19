@@ -25,12 +25,22 @@
     background-color: var(--elementos_neutros_escuro) !important;
 }
 
+.profile {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 1500px;
     }
     .itens-direita {
         width: 20% !important;
+    }
+    .optResponsivo {
+        display: none;
+    }
+    .profile {
+        display: block;
     }
 }
 

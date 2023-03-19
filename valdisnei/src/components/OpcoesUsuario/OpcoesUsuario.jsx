@@ -4,16 +4,29 @@ import Overlay from 'react-bootstrap/Overlay';
 import styles from './OpcoesUsuario.module.css'
 import ToggleButton from "../ToggleButton/ToggleButton";
 
-export default function OpcoesUsuario() {
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
+export function OpcoesUsuario(props) {
+  return (
+    <div className={props.className}>
+      <h5>Conta</h5>
+      <div className={styles.linha}>
+          <a href="#">
+              <span>Perfil</span>
+              <span className={styles.loginIcon}></span>
+          </a>
+      </div>
+      <div className={styles.linha}>
+          <span>Tema Escuro</span>
+          <span><ToggleButton /></span>
+      </div>
+    </div>
+  )
+}
+
+export function OverlayModal({show, setTarget}) {
+  const target = setTarget;
 
   return (
-    <>
-      <Button variant="danger" ref={target} onClick={() => setShow(!show)}>
-        Click me to see
-      </Button>
-      <Overlay target={target.current} show={show} placement='bottom'>
+    <Overlay target={target.current} show={show} placement="bottom-end">
         {({
           placement: _placement,
           arrowProps: _arrowProps,
@@ -29,25 +42,14 @@ export default function OpcoesUsuario() {
               backgroundColor: 'var(--elementos_neutros_escuro)',
               padding: '0.9em 0.9em',
               color: 'white',
-              borderRadius: '20px',
+              borderRadius: '15px',
               ...props.style,
             }} className={styles.OverlayModal}
           >
-            <h5>Conta</h5>
-            <div className={styles.linha}>
-                <a href="#">
-                    <span>Perfil</span>
-                    <span className={styles.loginIcon}></span>
-                </a>
-            </div>
-            <div className={styles.linha}>
-                <span>Tema Escuro</span>
-                <span><ToggleButton /></span>
-            </div>
+            <OpcoesUsuario />
           </div>
         )}
       </Overlay>
-    </>
-  );
+  )
 }
 
