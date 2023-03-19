@@ -11,11 +11,11 @@ import "./NavBar.css"
 function reduzirNavBar() {
   if (document.body.scrollTop > 66 || document.documentElement.scrollTop > 66) {
       document.querySelector('.container').style = 'max-width: 70%'
-      document.querySelector('.navbar').style = 'background-color: rgba(114, 131, 144, 0)'
+      // document.querySelector('.navbar').style = 'background-color: rgba(114, 131, 144, 0)'
   }
   else {
       document.querySelector('.container').style = 'max-width: 1500px'
-      document.querySelector('.navbar').style = 'background-color: var(--elementos_neutros_escuro)'
+      // document.querySelector('.navbar').style = 'background-color: var(--elementos_neutros_escuro)'
   }
 }
 window.onscroll = function() { reduzirNavBar() };
