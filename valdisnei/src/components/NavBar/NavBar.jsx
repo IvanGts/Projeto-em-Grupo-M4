@@ -27,7 +27,7 @@ export function NavBarDefault() {
   return (
     <Navbar expand="md" fixed='top'>
       <Container className='mx-1'>
-        <Navbar.Brand href="#" className='mx-5'><img src={logo} alt="Valdisnei" /></Navbar.Brand>
+        <Navbar.Brand href="/" className='mx-5'><img src={logo} alt="Valdisnei" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100 mx-3">
@@ -36,7 +36,7 @@ export function NavBarDefault() {
           </Nav>
           <Nav className="justify-content-around mx-3 w-100 itens-direita">
             <Nav.Link href="#home" className='small'>CADASTRE-SE</Nav.Link>
-            <Nav.Link href="#link" className='d-flex align-items-center'><img src={login_box_fill} alt="Login" className='m-0 h-100'/> Login</Nav.Link>
+            <Nav.Link href="/login" className='d-flex align-items-center'><img src={login_box_fill} alt="Login" className='m-0 h-100'/> Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
