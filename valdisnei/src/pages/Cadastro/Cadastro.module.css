@@ -1,0 +1,65 @@
+.CadastroContainer {
+    box-sizing: border-box;
+    min-height: 80vh;
+    margin: 6% 10%;
+    border-radius: 50px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d9;
+
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.imgValdisnei {
+    width: 50%;
+    min-height: 84vh;
+
+    background-image: url('../../assets/img/Valdisneiimg.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px 0 0 50px;
+}
+.imgValdisnei img {
+    visibility: hidden;
+}
+
+.Form {
+    width: 50%;
+    padding: 20px;
+}
+
+.Form label {
+    width: 100%;
+    text-align: left;
+}
+
+.Form input {
+    width: 100%;
+    margin: 0 0.25em;
+}
+
+.Form select {
+    width: 100%;
+}
+
+.ManyInputs {
+    display: flex;
+}
+
+
+.Btn {
+    width: 50%;
+    margin: 1em !important;
+}
+
+@media (max-width: 768px) {
+    .imgValdisnei {
+        display: none;
+    }
+
+    .Form {
+        width: 100%;
+    }
+}

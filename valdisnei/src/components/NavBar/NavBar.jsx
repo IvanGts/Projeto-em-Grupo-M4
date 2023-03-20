@@ -35,7 +35,7 @@ export function NavBarDefault() {
             <Nav.Link href="#link">Filmes</Nav.Link>
           </Nav>
           <Nav className="justify-content-around mx-3 w-100 itens-direita">
-            <Nav.Link href="#home" className='small'>CADASTRE-SE</Nav.Link>
+            <Nav.Link href="/cadastro" className='small'>CADASTRE-SE</Nav.Link>
             <Nav.Link href="/login" className='d-flex align-items-center'><img src={login_box_fill} alt="Login" className='m-0 h-100'/> Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
