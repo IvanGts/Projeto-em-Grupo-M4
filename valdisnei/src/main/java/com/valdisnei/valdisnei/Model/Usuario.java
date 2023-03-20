@@ -31,4 +31,8 @@ public class Usuario {
     @JoinColumn(name = "fk_telefone_id", referencedColumnName = "id")
     private Telefone telefone;
 
+    @OneToOne
+    @JoinColumn(name = "fk_biblioteca_id", referencedColumnName = "id")
+    private Biblioteca biblioteca;
+
 }
