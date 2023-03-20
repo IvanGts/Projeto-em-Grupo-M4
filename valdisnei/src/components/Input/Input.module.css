@@ -1,0 +1,10 @@
+.TextInput {
+    background: #F5F5F5;
+    border: 1px solid #C5C5C5;
+    box-shadow: inset 3px 3px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    height: 37px;
+
+    text-align: center;
+}
