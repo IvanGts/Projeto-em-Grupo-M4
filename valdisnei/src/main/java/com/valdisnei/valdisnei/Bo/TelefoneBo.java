@@ -2,7 +2,6 @@ package com.valdisnei.valdisnei.Bo;
 
 import com.valdisnei.valdisnei.Dto.TelefoneDto;
 import com.valdisnei.valdisnei.Model.Telefone;
-import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

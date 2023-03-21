@@ -1,7 +1,6 @@
 package com.valdisnei.valdisnei.service;
 
 import com.valdisnei.valdisnei.Bo.PlaylistBo;
-import com.valdisnei.valdisnei.Dto.PlaylistDto;
 import com.valdisnei.valdisnei.Model.Playlist;
 import com.valdisnei.valdisnei.repository.PlaylistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
