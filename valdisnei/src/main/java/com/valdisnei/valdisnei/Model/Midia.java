@@ -11,6 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
+@Table(name="Midia")
 public class Midia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

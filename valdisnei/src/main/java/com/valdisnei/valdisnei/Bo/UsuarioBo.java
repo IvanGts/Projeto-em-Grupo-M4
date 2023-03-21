@@ -1,12 +1,10 @@
 package com.valdisnei.valdisnei.Bo;
 
 import com.valdisnei.valdisnei.Dto.UsuarioDto;
-import com.valdisnei.valdisnei.Enum.TipoGenero;
 import com.valdisnei.valdisnei.Model.Usuario;
-import jakarta.persistence.*;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
+
 @Component
 public class UsuarioBo {
     public Usuario parseToEntity(UsuarioDto dto, Usuario pEntity){

@@ -12,6 +12,7 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(name="Filme")
 public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

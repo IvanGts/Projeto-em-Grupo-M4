@@ -18,7 +18,7 @@ public class Artista {
     private int id;
     @Column(name="nome")
     private String nome;
-    @Column(name="datadenascimento")
+    @Column(name="data_de_nascimento")
     private String datadenascimento;
     @Column(name="premicoes")
     private String premiacoes;

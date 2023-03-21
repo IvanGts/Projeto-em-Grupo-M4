@@ -11,6 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="Telefone")
 public class Telefone {
 
     @Id //Definir primary key

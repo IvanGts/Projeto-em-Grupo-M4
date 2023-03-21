@@ -18,7 +18,7 @@ public class Usuario {
     private int id;
     @Column(name = "nome", nullable = false)
     private String nome;
-    @Column(name="data_nascimento")
+    @Column(name="data_de_nascimento")
     private Date dataNascimento;
     @Column(name="email",nullable = false, unique = true)
 
