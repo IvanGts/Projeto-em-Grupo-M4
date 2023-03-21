@@ -6,22 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="Ator")
-public class Ator {
+public class Musico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name="ator")
-
-    private String ator;
-    @Column(name="musica")
-
-    private String musico;
-
-
+    @Column(name="atuacao")
+    private String atuacao;
 }

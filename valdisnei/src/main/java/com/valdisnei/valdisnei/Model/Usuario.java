@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.Date;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -16,23 +18,20 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(nullable = false)
+    @Column(name = "nome", nullable = false)
     private String nome;
+    @Column(name="data_de_nascimento")
     private Date dataNascimento;
-    @Column(nullable = false, unique = true)
-
+    @Column(name="email",nullable = false, unique = true)
     private String email;
-    @Column(nullable = false)
-
+    @Column(name="senha",nullable = false)
     private String senha;
-    @Enumerated(EnumType.STRING)
-    private TipoGenero genero;
     @OneToOne
     @JoinColumn(name = "fk_telefone_id", referencedColumnName = "id")
     private Telefone telefone;
-
-    @OneToOne
+    @Enumerated(EnumType.STRING)
+    private TipoGenero genero;
+    @OneToMany
     @JoinColumn(name = "fk_biblioteca_id", referencedColumnName = "id")
-    private Biblioteca biblioteca;
-
+    private List<Biblioteca> bibliotecas;
 }
