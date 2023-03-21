@@ -14,24 +14,23 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-@Table(name="Usuario")
-
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "nome", nullable = false)
     private String nome;
+    @Column(name="data_de_nascimento")
     private Date dataNascimento;
+    @Column(name="email",nullable = false, unique = true)
     private String email;
+    @Column(name="senha",nullable = false)
     private String senha;
-    @Enumerated(EnumType.STRING)
-    private TipoGenero genero;
-
     @OneToOne
     @JoinColumn(name = "fk_telefone_id", referencedColumnName = "id")
     private Telefone telefone;
-
+    @Enumerated(EnumType.STRING)
+    private TipoGenero genero;
     @OneToMany
     @JoinColumn(name = "fk_biblioteca_id", referencedColumnName = "id")
     private List<Biblioteca> bibliotecas;

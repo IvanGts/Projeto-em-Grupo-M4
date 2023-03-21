@@ -11,11 +11,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Musica")
 public class Musica {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name="duracao")
     private double duracao;
+
+    @Column(name="nota")
     private int nota;
 
     @ManyToOne      //varias playlists para uma biblioteca

@@ -12,14 +12,20 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(name="Filme")
 public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name="duracao")
     private Double duracao;
+
+    @Column(name="tipo")
     private String tipo;
-//    private ArrayList elenco;
+
+    @Column(name="diretor")
     private String diretor;
+    @Column(name="produtor")
     private String produtor;
 
     @OneToMany   //varias playlists para uma biblioteca
