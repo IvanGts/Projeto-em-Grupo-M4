@@ -32,7 +32,7 @@ export function NavBarDefault() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100 mx-3">
             <Nav.Link href="#home">Música</Nav.Link>
-            <Nav.Link href="#link">Filmes</Nav.Link>
+            <Nav.Link href="/filmes">Filmes</Nav.Link>
           </Nav>
           <Nav className="justify-content-around mx-3 w-100 itens-direita">
             <Nav.Link href="/cadastro" className='small'>CADASTRE-SE</Nav.Link>
@@ -70,7 +70,7 @@ export function NavBarLogado() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100 mx-3">
             <Nav.Link href="#home">Música</Nav.Link>
-            <Nav.Link href="#link">Filmes</Nav.Link>
+            <Nav.Link href="/filmes">Filmes</Nav.Link>
             <Nav.Link href="#link">Minha Biblioteca</Nav.Link>
           </Nav>
           <Nav className="justify-content-around mx-3 w-100 itens-direita">

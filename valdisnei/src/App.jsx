@@ -5,6 +5,8 @@ import Header from './components/Header/Header';
 import Inicio from './pages/Inicio/Inicio';
 import Login from './pages/Login/Login'
 import Cadastro from "./pages/Cadastro/Cadastro";
+import Filmes from './pages/Filmes/Filmes'
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -16,8 +18,9 @@ function App() {
           <Route path="/" element={<Inicio/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/cadastro' element={<Cadastro/>} />
+          <Route path='/filmes' element={<Filmes/>} />
         </Routes>
-        
+        <Footer/>
       </Router>
     </div>
   )
