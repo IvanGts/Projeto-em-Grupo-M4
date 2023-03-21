@@ -11,6 +11,7 @@
     background-color: #d9d9d9;
 
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    padding: 0 13%;
 }
 
 .LoginContainer div {
@@ -27,7 +28,7 @@
 }
 
 .LoginContainer span, .LoginContainer input{
-    width: 70%;
+    width: 100%;
 }
 
 .LoginContainer span {
@@ -41,7 +42,7 @@
 }
 
 .LoginBtn {
-    width: 50%;
+    width: 70%;
     margin: 1em !important;
 }
 

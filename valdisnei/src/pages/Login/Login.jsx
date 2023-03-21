@@ -1,4 +1,4 @@
-import Input from "../../components/Input/Input";
+import {Input, Senha} from "../../components/Input/Input";
 import ButtonV  from "../../components/Button/ButtonValdisnei";
 import styles from "./Login.module.css";
 
@@ -13,7 +13,7 @@ export default function Login() {
                 <Input placeholder="Digite seu email" tipo="email" name="email" required />
 
                 <span>Senha</span>
-                <Input placeholder="Digite sua senha" tipo="password" name="senha" required />
+                <Senha placeholder="Digite sua senha" name="senha" required />
                 
                 <a href="#" className={styles.esqueceuSenha}>Esqueceu sua senha?</a>
 
@@ -22,7 +22,7 @@ export default function Login() {
 
             <div className={styles.linkCadastro}>
                 <span>Ainda não tem uma conta?</span>
-                <a href="">Cadastre-se</a>
+                <a href="/cadastro">Cadastre-se</a>
 
             </div>
         </div>

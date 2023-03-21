@@ -16,6 +16,7 @@
 
 .Eye {
     cursor: pointer;
+    height: 100%;
 
     background: #F5F5F5;
     border: 1px solid #C5C5C5;
@@ -23,12 +24,12 @@
     box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.25);
     border-radius: 0 10px 10px 0;
 
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 1%;
 }
 
 
 .BoxSenha {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: nowrap;
 }
