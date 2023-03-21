@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+
 @Getter
 @Setter
 
@@ -15,4 +16,6 @@ public class PlaylistDto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+
+  
 }

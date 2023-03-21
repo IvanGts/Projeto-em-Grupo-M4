@@ -7,11 +7,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+<<<<<<< HEAD
 @Table(name="Midia")
+=======
+@AllArgsConstructor
+@NoArgsConstructor
+
+
+>>>>>>> 3d939e739233297bbc54818af51ff1bbb9bd39fe
 public class Midia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +27,5 @@ public class Midia {
     private int ano;
     @Column(name="genero")
     private String genero;
+
 }
