@@ -1,6 +1,6 @@
-import Carrossel from "../components/Carrossel/Carrossel";
-import List from "../components/Lists/Lists";
-import {Chamada, ChamaParaCadastro} from "../components/Chamada/Chamada";
+import Carrossel from "../../components/Carrossel/Carrossel";
+import List from "../../components/Lists/Lists";
+import {Chamada, ChamaParaCadastro} from "../../components/Chamada/Chamada";
 
 export default function Inicio() {
     return (
