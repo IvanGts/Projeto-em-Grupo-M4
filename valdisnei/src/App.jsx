@@ -1,19 +1,23 @@
 import './App.css'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import CardsMusica from './components/CardsMusica/CardsMusica'
-import CardsFilme from './components/CardsFilme/CardsFilme'
-import NomeMusica from './components/NomeMusica/NomeMusica'
-import Footer from './components/Footer/Footer'
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header/Header';
+import Inicio from './pages/Inicio/Inicio';
+import Login from './pages/Login/Login'
+import Cadastro from "./pages/Cadastro/Cadastro";
 
 function App() {
 
   return (
     <div className="App">
       <Router>
-        <CardsMusica/>
-        <CardsFilme/>
-        <NomeMusica/>
-        <Footer/>
+        <Header estaLogado={true} neutro={false} />
+        <Routes>
+          <Route path="/" element={<Inicio/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/cadastro' element={<Cadastro/>} />
+        </Routes>
+        
       </Router>
     </div>
   )
