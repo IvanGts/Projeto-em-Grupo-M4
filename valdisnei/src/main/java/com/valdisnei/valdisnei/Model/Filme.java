@@ -1,9 +1,6 @@
 package com.valdisnei.valdisnei.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,9 +16,18 @@ public class Filme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name="duracao")
     private Double duracao;
+    @Column(name="tipo")
+
     private String tipo;
+    @Column(name="elenco")
+
     private ArrayList elenco;
+    @Column(name="diretor")
+
     private String diretor;
+    @Column(name="produtor")
+
     private String produtor;
 }
