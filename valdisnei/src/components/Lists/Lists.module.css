@@ -1,6 +1,14 @@
 .Temporary {
-    height: 194px;
-    width: 90%;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 280px;
+}
+
+.Temporary div {
+    flex-shrink: 0;
 }
 
 .List {

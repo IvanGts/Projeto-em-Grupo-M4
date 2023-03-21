@@ -1,11 +1,11 @@
 import styles from "./Lists.module.css";
 
-export default function List({tituloLista}) {
+export default function List(props) {
     return (
         <div className={styles.List}>
-            <h3>{tituloLista}</h3>
+            <h3>{props.tituloLista}</h3>
             <div className={styles.Temporary}>
-                Insira Cards aqui
+                {props.children}
             </div>
         </div>
     )
