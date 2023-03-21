@@ -26,13 +26,14 @@ public class Midia {
 
     @OneToMany     //varias playlists para uma biblioteca
     @JoinColumn(name = "fk_filme_id", referencedColumnName = "id")
-    private Filme filme;
+    private List<Filme> filme;
 
     @OneToMany     //varias playlists para uma biblioteca
     @JoinColumn(name = "fk_musica_id", referencedColumnName = "id")
-    private Musica musica;
+    private List<Musica> musica;
 
     @OneToMany     //varias playlists para uma biblioteca
     @JoinColumn(name = "fk_artista_id", referencedColumnName = "id")
     private List<Artista> artistas;
+
 }

@@ -23,6 +23,7 @@ public class Playlist {
 
     private int id;
     private String ordemDeExecucao;
+
     private int midiaAtual;
     @OneToMany
     @JoinColumn(name = "fk_midia_id", referencedColumnName = "id")

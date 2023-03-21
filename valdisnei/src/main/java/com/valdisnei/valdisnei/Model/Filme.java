@@ -18,11 +18,16 @@ public class Filme {
     private int id;
     private Double duracao;
     private String tipo;
-    private ArrayList elenco;
+//    private ArrayList elenco;
     private String diretor;
     private String produtor;
 
-    @ManyToMany      //varias playlists para uma biblioteca
+    @OneToMany   //varias playlists para uma biblioteca
     @JoinColumn(name = "fk_artista_id", referencedColumnName = "id")
-    private Artista artista;
+    private List<Artista> elenco;
+
+//    @OneToMany   //varias playlists para uma biblioteca
+//    @JoinColumn(name = "fk_midia_id", referencedColumnName = "id")
+//    private Midia midia;
+
 }

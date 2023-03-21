@@ -1,4 +1,5 @@
 package com.valdisnei.valdisnei.Model;
+
 import java.util.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
