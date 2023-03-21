@@ -1,16 +1,15 @@
 package com.valdisnei.valdisnei.Model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -25,4 +24,15 @@ public class Midia {
     private String ano;
     private String genero;
 
+    @OneToMany     //varias playlists para uma biblioteca
+    @JoinColumn(name = "fk_filme_id", referencedColumnName = "id")
+    private Filme filme;
+
+    @OneToMany     //varias playlists para uma biblioteca
+    @JoinColumn(name = "fk_musica_id", referencedColumnName = "id")
+    private Musica musica;
+
+    @OneToMany     //varias playlists para uma biblioteca
+    @JoinColumn(name = "fk_artista_id", referencedColumnName = "id")
+    private List<Artista> artistas;
 }

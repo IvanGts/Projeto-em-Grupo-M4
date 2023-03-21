@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.Date;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -27,12 +29,12 @@ public class Usuario {
     private String senha;
     @Enumerated(EnumType.STRING)
     private TipoGenero genero;
+
     @OneToOne
     @JoinColumn(name = "fk_telefone_id", referencedColumnName = "id")
     private Telefone telefone;
 
-    @OneToOne
+    @OneToMany
     @JoinColumn(name = "fk_biblioteca_id", referencedColumnName = "id")
-    private Biblioteca biblioteca;
-
+    private List<Biblioteca> bibliotecas;
 }
