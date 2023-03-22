@@ -1,14 +1,14 @@
 import Card from 'react-bootstrap/Card';
 import styles from './CardsM.module.css'
 
-function CardsMusica() {
+function CardsMusica(props) {
   return (
     <Card className={styles.card}>
-      <Card.Img className={styles.img} variant="top" src="https://cdn.shopify.com/s/files/1/0522/1610/3083/articles/MILEY_CYRUS_FLOWERS_180x.png?v=1674751436" />
+      <Card.Img className={styles.img} variant="top" src={props.img}/>
       <Card.Body className={styles["card-body"]}>
-        <Card.Title className={styles["card-title"]}>Flowers</Card.Title>
-        <Card.Text className={styles["card-text"]}> Miley Cirus</Card.Text>
-        <Card.Text className={styles["card-text"]}> Flowers</Card.Text>
+        <Card.Title className={styles["card-title"]}>{props.musica}</Card.Title>
+        <Card.Text className={styles["card-text"]}> {props.album}</Card.Text>
+        <Card.Text className={styles["card-text"]}> {props.artista}</Card.Text>
       </Card.Body>
     </Card>
   )
