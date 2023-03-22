@@ -15,6 +15,7 @@
   .card-body{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 90px;
     background-color:#7D5CAE;
     text-align: start;
@@ -24,8 +25,8 @@
   
 .card-title {
     font-size: 16px;
-        text-align: start;
-        font-weight: bold;
+    text-align: start;
+    font-weight: bold;
     }
 
     .card-text {
