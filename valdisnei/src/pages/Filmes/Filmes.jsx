@@ -3,7 +3,7 @@ import List from "../../components/Lists/Lists";
 import CardsFilme from '../../components/CardsFilme/CardsFilme'
 
 
-export default function Inicio() {
+export default function Filme() {
     return (
         <>
         <Carrossel />

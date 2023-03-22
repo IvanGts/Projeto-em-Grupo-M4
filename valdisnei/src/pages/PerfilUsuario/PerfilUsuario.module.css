@@ -1,0 +1,35 @@
+.Container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    height: 300px;
+    background: radial-gradient(100% 915.19% at 100% 100%, #7D5CAE 0%, #4B4B4B 100%)
+}
+.Container h2{
+    padding: 25px 30px;
+    color: #FFFFFF;
+}
+.Img{
+    top: 100px;
+    position: relative;
+    right: 20px;
+}
+.Container2{
+    height: 86px;
+    display: flex;
+    justify-content: flex-end;  
+}
+.Vazio{
+    flex-shrink: 0;
+    height: 100%;
+    width: 290px;
+}
+.Container2 span{
+    margin: 10px;
+}
+.List{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}

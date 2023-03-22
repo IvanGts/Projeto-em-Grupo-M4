@@ -1,6 +1,6 @@
 import styles from "./Lists.module.css";
 
-export default function List(props) {
+export function List(props) {
     return (
         <div className={styles.List}>
             <h3>{props.tituloLista}</h3>
@@ -10,3 +10,16 @@ export default function List(props) {
         </div>
     )
 }
+
+export function ListMusicas(props){
+    return (
+        <div className={styles.List}>
+            <h3>{props.tituloLista}</h3>
+            <div className={styles.ListMusicas}>
+                {props.children}
+            </div>
+            </div>
+        )
+}
+
+export default List;

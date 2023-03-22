@@ -7,6 +7,7 @@ import Login from './pages/Login/Login'
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Filmes from './pages/Filmes/Filmes'
 import Footer from './components/Footer/Footer';
+import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/cadastro' element={<Cadastro/>} />
           <Route path='/filmes' element={<Filmes/>} />
+          <Route path='/perfil' element={<PerfilUsuario NomeUsuario={"Alguem"}/>}/>
         </Routes>
         <Footer/>
       </Router>

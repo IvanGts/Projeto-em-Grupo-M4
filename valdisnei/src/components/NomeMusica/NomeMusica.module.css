@@ -17,7 +17,8 @@
     flex-direction: row;
     width: 100%;
     background-color:#7D5CAE;
-    text-align: start;
+    justify-content: space-between;
+    align-items: center;
     padding: 0 5px;
     
   }
