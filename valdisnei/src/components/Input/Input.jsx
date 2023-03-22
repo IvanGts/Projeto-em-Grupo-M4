@@ -7,7 +7,7 @@ export function Input(props) {
 
     return (
         <input type={props.tipo} placeholder={props.placeholder} name={props.name} id={props.name} className={styles.TextInput} required={props.required}
-        min={props.min} max={props.max} pattern={props.pattern} style={props.style} />
+        min={props.min} max={props.max} pattern={props.pattern} defaultValue={props.value} style={props.style} />
     )
 }
 

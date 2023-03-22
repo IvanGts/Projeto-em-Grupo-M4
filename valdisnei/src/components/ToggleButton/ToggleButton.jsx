@@ -8,10 +8,12 @@ export default function ToggleButton() {
     function turn() {
         isOn = !isOn;
         if (isOn) {
+            document.querySelector("#ativeDark").checked = true;
             console.log(isOn);
             setTexto("ON")
             setCaixaStyle(styles.TogglerIsOn)
         } else {
+            document.querySelector("#ativeDark").checked = false;
             console.log(isOn);
             setTexto("OFF")
             setCaixaStyle(styles.TogglerBox)

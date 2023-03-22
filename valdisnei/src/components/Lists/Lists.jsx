@@ -2,7 +2,7 @@ import styles from "./Lists.module.css";
 
 export function List(props) {
     return (
-        <div className={styles.List}>
+        <div className={styles.List + " dark"}>
             <h3>{props.tituloLista}</h3>
             <div className={styles.Temporary}>
                 {props.children}
@@ -13,7 +13,7 @@ export function List(props) {
 
 export function ListMusicas(props){
     return (
-        <div className={styles.List}>
+        <div className={styles.List + " dark"}>
             <h3>{props.tituloLista}</h3>
             <div className={styles.ListMusicas}>
                 {props.children}

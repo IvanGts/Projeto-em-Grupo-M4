@@ -11,14 +11,32 @@ import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 import {PerfilMusico, PerfilAtor} from './pages/PerfilArtista/PerfilArtista'
 import './services/login'
 import { useEffect, useState } from 'react';
+import { lightTheme, darkTheme } from './services/themes';
+
 const testeIsLogado = localStorage.getItem('logado')=='true';
 function App() {
+  const [isDark, setIsDark] = useState(true);
+
   const [isLogado, setIsLogado] = useState(false);
   useEffect(() => setIsLogado(testeIsLogado?true:false),[])
+
+  function handleOnChange() {
+    console.log('abri')
+          setIsDark(!isDark);
+          if (isDark) {
+            console.log('is dark');
+            darkTheme;
+          } else {
+            console.log('is light');
+            lightTheme;
+          }
+  }
 
   return (
     <div className="App">
       <Router>
+        <input type="checkbox" name="ativeDark" id="ativeDark" checked={false} style={{display: 'none'}}
+        onChange={ handleOnChange } />
         <Header estaLogado={isLogado} neutro={false} />
         <Routes>
           <Route path="/" element={testeIsLogado?<InicioLogged/>:<Inicio/>}/>

@@ -4,6 +4,7 @@ import imgValdisnei from "../../assets/img/Valdisneiimg.png"
 import styles from "./Cadastro.module.css";
 
 export default function Cadastro() {
+    let email = sessionStorage.getItem("email");
     return (
         <div className={styles.CadastroContainer}>
             <div className={styles.imgValdisnei}>
@@ -21,7 +22,7 @@ export default function Cadastro() {
                 <div>
                     <label for="dataNascimento">Data de Nascimento: </label>
                     <fieldset id="dataNascimento" name="dataNascimento" className={styles.ManyInputs}>
-                        <Input placeholder="Dia" tipo="number" name="dia" min="1" max={ new Date().getFullYear() } required style={ {
+                        <Input placeholder="Dia" tipo="number" name="dia" min="1" max="31" required style={ {
                             width: "30%"
                         } } />
                         <Select name="mês">
@@ -38,7 +39,7 @@ export default function Cadastro() {
                             <option value="NOV">Novembro</option>
                             <option value="DEZ">Dezembro</option>
                         </Select>
-                        <Input placeholder="Ano" tipo="number" name="ano" required min="1900" max="2023" style={ {
+                        <Input placeholder="Ano" tipo="number" name="ano" required min="1900" max={ new Date().getFullYear() } style={ {
                             width: "40%"
                         } } />
                     </fieldset>
@@ -67,7 +68,9 @@ export default function Cadastro() {
                 
                 <div>
                     <label for="email">E-mail:</label>
-                    <Input placeholder="Digite seu email" tipo="email" name="email" required />
+                    <Input placeholder="Digite seu email" tipo="email" name="email"
+                    value={email}
+                    required />
                 
                 </div>
                 
@@ -84,7 +87,11 @@ export default function Cadastro() {
                     </div>
                 </div>
                 
-                <ButtonV textoBotao={"Cadastrar"} classe={styles.Btn}></ButtonV>
+                <ButtonV textoBotao={"Cadastrar"} classe={styles.Btn}
+                click={
+                    ()=>sessionStorage.clear()
+                }
+                ></ButtonV>
                 
                 <div className={styles.linkCadastro}>
                     <span>Já tem uma conta?</span>

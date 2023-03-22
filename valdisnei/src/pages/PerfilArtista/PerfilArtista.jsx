@@ -14,7 +14,7 @@ export function PerfilMusico(props){
             <h2>{props.NomeUsuario}</h2>
             <img src={Usuario} className={styles.Img}></img>
             </div>
-            <div className={styles.Container2}>
+            <div className={styles.Container2 + " dark"}>
             <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sequi eos consectetur in! Beatae vel ex repellat amet cumque expedita eaque sapiente accusantium dignissimos, odit in magnam modi fuga praesentium.</span>
             <div className={styles.Vazio}></div>
             </div>

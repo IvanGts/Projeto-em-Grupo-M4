@@ -17,6 +17,9 @@
     width: 249px;
     padding: 0.7em 1em;
 
+    border-top: 1px solid var(--elementos_neutros_escuro);
+    border-bottom: 1px solid var(--elementos_neutros_escuro);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
