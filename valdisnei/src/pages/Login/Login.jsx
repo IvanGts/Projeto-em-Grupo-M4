@@ -15,7 +15,7 @@ export default function Login() {
                 <span>Senha</span>
                 <Senha placeholder="Digite sua senha" name="senha" required />
                 
-                <a href="#" className={styles.esqueceuSenha}>Esqueceu sua senha?</a>
+                <a href="/recuperarsenha" className={styles.esqueceuSenha}>Esqueceu sua senha?</a>
 
                 <ButtonV textoBotao={"Entrar"} classe={styles.LoginBtn}></ButtonV>
             </div>

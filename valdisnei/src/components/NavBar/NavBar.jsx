@@ -31,7 +31,7 @@ export function NavBarDefault() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100 mx-3">
-            <Nav.Link href="/musicas">Música</Nav.Link>
+            <Nav.Link href="/musicasnpm ">Música</Nav.Link>
             <Nav.Link href="/filmes">Filmes</Nav.Link>
           </Nav>
           <Nav className="justify-content-around mx-3 w-100 itens-direita">

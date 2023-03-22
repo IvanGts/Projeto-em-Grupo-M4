@@ -9,6 +9,7 @@ import Filmes from './pages/Filmes/Filmes'
 import Footer from './components/Footer/Footer';
 import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 import Musicas from './pages/Musicas/Musicas';
+import RecuperarSenha from './pages/RecuperarSenha/RecuperarSenha';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/filmes' element={<Filmes/>} />
           <Route path='/perfil' element={<PerfilUsuario NomeUsuario={"Alguem"}/>}/>
           <Route path='/musicas' element={<Musicas/>}/>
+          <Route path='/recuperarsenha' element={<RecuperarSenha/>}/>
         </Routes>
         <Footer/>
       </Router>
