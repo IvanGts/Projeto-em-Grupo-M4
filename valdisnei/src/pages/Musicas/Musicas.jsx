@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button';
 import Carrossel from "../../components/Carrossel/Carrossel";
 import List from "../../components/Lists/Lists";
 import CardsMusica from '../../components/CardsMusica/CardsMusica'
@@ -56,7 +55,7 @@ export default function Musicas() {
 
        <CardsMusica img={"https://thumbs.dreamstime.com/b/equalizador-da-escala-de-cor-19184360.jpg"} musica={"Cuff It"} album={"Renaissance"} artista={"Beyoncé"}/>
 
-      <CardsMusica img={"https://thumbs.dreamstime.com/b/equalizador-da-escala-de-cor-19184360.jpg"} musica={"Kill Bill"} album={"SOS"} artista={"SZA"}/>
+      <CardsMusica img={"https://thumbs.dreamstime.com/b/equalizador-da-escala-de-cor-19184360.jpg"} musica={"Kill Bill"} album={"SOS"} artista={""}/>
         
 
         </List>
