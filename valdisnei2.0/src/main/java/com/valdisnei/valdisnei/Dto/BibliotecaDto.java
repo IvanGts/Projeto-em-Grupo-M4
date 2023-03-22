@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 public class BibliotecaDto {
     @OneToOne
-    private UsuarioDto usuarioDto;
-    private List<MidiaDto> midiaDto;
-    private List<PlaylistDto> playlistDto;
+    private Usuario usuario;
+    private List<Midia> midia;
+    private List<Playlist> playlist;
 }

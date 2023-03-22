@@ -4,10 +4,12 @@ import com.valdisnei.valdisnei.Dto.*;
 import com.valdisnei.valdisnei.Model.Artista;
 import com.valdisnei.valdisnei.Model.Midia;
 import com.valdisnei.valdisnei.Model.Playlist;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class PlaylistBo {
     public Playlist parseToEntity(PlaylistDto dto, Playlist pEntity){
         if (pEntity == null)

@@ -9,6 +9,6 @@ import lombok.Setter;
 public class MusicaDto {
 
     private double duracao;
-    private ArtistaDto artistaDto;
+    private Artista artista;
     private int nota;
 }

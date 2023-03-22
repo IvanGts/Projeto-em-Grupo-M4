@@ -1,16 +1,13 @@
 package com.valdisnei.valdisnei.Service;
 
-
 import com.valdisnei.valdisnei.Bo.UsuarioBo;
 import com.valdisnei.valdisnei.Dto.UsuarioDto;
 import com.valdisnei.valdisnei.Model.Usuario;
 import com.valdisnei.valdisnei.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
-
 
 @Service
 public class CrudUsuarioService { // dependencia de classes CrudService
