@@ -5,7 +5,9 @@ import Header from './components/Header/Header';
 import Inicio from './pages/Inicio/Inicio';
 import Login from './pages/Login/Login'
 import Cadastro from "./pages/Cadastro/Cadastro";
-import Footer from "./components/Footer/Footer";
+import Filmes from './pages/Filmes/Filmes'
+import Footer from './components/Footer/Footer';
+import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 
 function App() {
 
@@ -17,8 +19,10 @@ function App() {
           <Route path="/" element={<Inicio/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/cadastro' element={<Cadastro/>} />
+          <Route path='/filmes' element={<Filmes/>} />
+          <Route path='/perfil' element={<PerfilUsuario NomeUsuario={"Alguem"}/>}/>
         </Routes>
-        <Footer />
+        <Footer/>
       </Router>
     </div>
   )

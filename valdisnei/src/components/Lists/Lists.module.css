@@ -19,3 +19,7 @@
     width: 90%;
     margin: 1em auto 2em;
 }
+.ListMusicas{
+    width: 100%;
+    display: flex;
+}
