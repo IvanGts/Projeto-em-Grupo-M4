@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 import Musicas from './pages/Musicas/Musicas';
 import RecuperarSenha from './pages/RecuperarSenha/RecuperarSenha';
+import Playlist from './pages/Playlist/Playlist'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/perfil' element={<PerfilUsuario NomeUsuario={"Alguem"}/>}/>
           <Route path='/musicas' element={<Musicas/>}/>
           <Route path='/recuperarsenha' element={<RecuperarSenha/>}/>
+          <Route path='/playlist' element={<Playlist/>}/>
         </Routes>
         <Footer/>
       </Router>

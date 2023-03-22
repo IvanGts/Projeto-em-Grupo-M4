@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import styles from './NomeMusica.module.css'
 
-function NomeMusica() {
+function NomeMusica(props) {
   return (
     <Card className={styles.card}>
       <Card.Img className={styles.Img} variant="top" src="https://imgs.casasbahia.com.br/1501009140/1xg.jpg?imwidth=500" />
