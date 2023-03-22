@@ -9,7 +9,7 @@ export function OpcoesUsuario(props) {
     <div className={props.className}>
       <h5>Conta</h5>
       <div className={styles.linha}>
-          <a href="#">
+          <a href="/perfil">
               <span>Perfil</span>
               <span className={styles.loginIcon}></span>
           </a>
@@ -18,6 +18,14 @@ export function OpcoesUsuario(props) {
           <span>Tema Escuro</span>
           <span><ToggleButton /></span>
       </div>
+      <div className={styles.linha}>
+          <a href="/" onClick={()=>{
+            localStorage.clear();
+          }}>
+              <span>Sair</span>
+          </a>
+      </div>
+      
     </div>
   )
 }
