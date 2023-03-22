@@ -17,7 +17,13 @@ export default function Login() {
                 
                 <a href="#" className={styles.esqueceuSenha}>Esqueceu sua senha?</a>
 
-                <ButtonV textoBotao={"Entrar"} classe={styles.LoginBtn}></ButtonV>
+                <ButtonV textoBotao={"Entrar"} classe={styles.LoginBtn} click={
+                    () => { console.log('AAAAAA');
+                        localStorage.setItem('id', 1)
+                        localStorage.setItem('logado', true)
+                        window.location.pathname = '/';
+                    }
+                }></ButtonV>
             </div>
 
             <div className={styles.linkCadastro}>

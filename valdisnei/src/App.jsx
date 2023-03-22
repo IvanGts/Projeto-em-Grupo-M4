@@ -11,17 +11,17 @@ import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
 import {PerfilMusico, PerfilAtor} from './pages/PerfilArtista/PerfilArtista'
 import './services/login'
 import { useEffect, useState } from 'react';
-
+const testeIsLogado = localStorage.getItem('logado')=='true';
 function App() {
   const [isLogado, setIsLogado] = useState(false);
-  useEffect(() => setIsLogado(localStorage.getItem('logado')=='true'?true:false),[])
+  useEffect(() => setIsLogado(testeIsLogado?true:false),[])
 
   return (
     <div className="App">
       <Router>
         <Header estaLogado={isLogado} neutro={false} />
         <Routes>
-          <Route path="/" element={<InicioLogged/>}/>
+          <Route path="/" element={testeIsLogado?<InicioLogged/>:<Inicio/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/cadastro' element={<Cadastro/>} />
           <Route path='/filmes' element={<Filmes/>} />

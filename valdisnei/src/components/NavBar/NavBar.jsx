@@ -50,7 +50,7 @@ export function NavBarNeutra() {
   return (
     <Navbar expand="md" fixed='top'>
       <Container className='m-auto'>
-        <Navbar.Brand href="#" className='mx-auto'><img src={logo} alt="Valdisnei" /></Navbar.Brand>
+        <Navbar.Brand href="/" className='mx-auto'><img src={logo} alt="Valdisnei" /></Navbar.Brand>
         <span className='me-1 small'>Modo Escuro: </span>
         <ToggleButton/>
       </Container>
@@ -65,7 +65,7 @@ export function NavBarLogado() {
   return (
     <Navbar expand="md" fixed='top'>
       <Container className='mx-1'>
-        <Navbar.Brand href="#" className='mx-5'><img src={logo} alt="Valdisnei" /></Navbar.Brand>
+        <Navbar.Brand href="/" className='mx-5'><img src={logo} alt="Valdisnei" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-around w-100 mx-3">

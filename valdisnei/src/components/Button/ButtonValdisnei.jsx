@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import "./ButtonValdisnei.css"
 
-function ButtonV({textoBotao, classe}) {
+function ButtonV({textoBotao, classe, click}) {
   return (
     <>
-      <Button href="#" className={classe}>{textoBotao}</Button>
+      <Button href={"#"} className={classe} onClick={click} >{textoBotao}</Button>
     </>
   );
 }
