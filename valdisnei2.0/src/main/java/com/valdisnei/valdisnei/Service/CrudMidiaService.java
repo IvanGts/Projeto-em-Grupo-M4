@@ -15,7 +15,7 @@ public class CrudMidiaService { // dependencia de classes CrudService
     private MidiaRepository midiaRepository;
     @Autowired
     private MidiaBo midiaBo;
-    public List<Midia> pegarTodosMidia(){
+    public List<Midia> pegarTodasMidias(){
         return midiaRepository.findAll();
 
     }
