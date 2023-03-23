@@ -11,3 +11,8 @@
  +  Mysql 
 
 ### que gerencia as mídias disponíveis num serviço de streaming, e também as bibliotecas dos usuários.
+
+## Ferramentas utilizadas:
+[![java-original-wordmark-logo-icon-146459.png](https://i.postimg.cc/52dkFVvf/java-original-wordmark-logo-icon-146459.png)](https://postimg.cc/Tp0cZBCs)
+
+[![kisspng-intellij-idea-jetbrains-integrated-development-env-5b9a70df9dd6c3-3468850615368480956465-rem.png](https://i.postimg.cc/fLDV3JWY/kisspng-intellij-idea-jetbrains-integrated-development-env-5b9a70df9dd6c3-3468850615368480956465-rem.png)](https://postimg.cc/Z9sb2Ydq)
