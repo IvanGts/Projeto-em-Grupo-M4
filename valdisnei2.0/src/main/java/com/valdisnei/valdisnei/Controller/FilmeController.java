@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/filme")
 @RestController
+@CrossOrigin(origins = "*")
 public class FilmeController {
     @Autowired
     private CrudFilmeService crudFilmeService;

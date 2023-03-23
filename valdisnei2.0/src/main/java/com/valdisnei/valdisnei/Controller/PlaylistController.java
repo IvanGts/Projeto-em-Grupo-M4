@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/playlist")
 @RestController
+@CrossOrigin(origins = "*")
 public class PlaylistController {
     @Autowired
     private CrudPlaylistService crudPlaylistService;

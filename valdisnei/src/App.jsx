@@ -14,7 +14,6 @@ import Playlist from './pages/Playlist/Playlist'
 import {PerfilMusico, PerfilAtor} from './pages/PerfilArtista/PerfilArtista'
 import './services/login'
 import { useEffect, useState } from 'react';
-import { lightTheme, darkTheme } from './services/themes';
 
 const testeIsLogado = localStorage.getItem('logado')=='true';
 function App() {
@@ -50,7 +49,7 @@ function App() {
           <Route path='/musicas' element={<Musicas/>}/>
           <Route path='/recuperarsenha' element={<RecuperarSenha/>}/>
           <Route path='/playlist' element={<Playlist/>}/>
-          <Route path='/pArtista' element={<PerfilAtor/>} />
+          <Route path='/pArtista' element={<PerfilAtor />} />
         </Routes>
         <Footer/>
       </Router>

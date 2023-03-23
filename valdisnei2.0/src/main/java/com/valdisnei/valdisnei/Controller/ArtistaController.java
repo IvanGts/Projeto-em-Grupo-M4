@@ -11,11 +11,12 @@ import java.util.List;
 
 @RequestMapping("/artistas")
 @RestController
+@CrossOrigin(origins = "*")
 public class ArtistaController {
     @Autowired
     private CrudArtistaService crudArtistaService;
 
-    @PostMapping
+    @PostMapping("/addartista")
     public ResponseEntity criarArtista(@RequestBody ArtistaDto artistaDto){
         Artista artista = crudArtistaService.criarArtista(artistaDto);
         return ResponseEntity.ok(artista);

@@ -18,6 +18,7 @@
     height: 86px;
     display: flex;
     justify-content: flex-end;  
+    color: var(--leve_white);
 }
 .Vazio{
     flex-shrink: 0;

@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/musico")
 @RestController
+@CrossOrigin(origins = "*")
 public class MusicoController {
     @Autowired
     private CrudMusicoService crudMusicoService;

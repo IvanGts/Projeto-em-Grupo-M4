@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/biblioteca")
 @RestController
+@CrossOrigin(origins = "*")
 public class BibliotecaController {
     @Autowired
     private CrudBibliotecaService crudBibliotecaService;

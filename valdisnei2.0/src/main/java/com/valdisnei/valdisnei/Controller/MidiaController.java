@@ -13,6 +13,7 @@ import java.util.List;
 
 @RequestMapping("/midia")
 @RestController
+@CrossOrigin(origins = "*")
 public class MidiaController {
     @Autowired
     private CrudMidiaService crudMidiaService;

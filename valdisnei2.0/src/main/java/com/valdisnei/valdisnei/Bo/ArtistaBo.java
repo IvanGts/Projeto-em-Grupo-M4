@@ -16,6 +16,7 @@ public class ArtistaBo {
         pEntity.setNome(dto.getNome());
         pEntity.setDatadenascimento(dto.getDatadenascimento());
         pEntity.setPremiacoes(dto.getPremiacoes());
+        pEntity.setGenero(dto.getGenero());
 
         return pEntity;
     }

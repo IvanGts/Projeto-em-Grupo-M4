@@ -12,6 +12,7 @@ import java.util.List;
 
 @RequestMapping("/ator")
 @RestController
+@CrossOrigin(origins = "*")
 public class AtorController {
     @Autowired
     private CrudAtorService crudAtorService;

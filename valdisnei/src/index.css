@@ -39,7 +39,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background-color: var(--leve_white);
+  background-color: var(--leve_black);
   font-family: var(--font-family-default);
 }
 
