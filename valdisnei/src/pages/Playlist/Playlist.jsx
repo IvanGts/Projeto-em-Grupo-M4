@@ -17,20 +17,28 @@ export default function Playlist(props){
             </div>
             
         </div>
-        <ListMusicas tituloLista={"Link.Suas Músicas"}>
+        <ListMusicas tituloLista={"Suas Músicas"}>
             <div className={styles.List}>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+           <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+           <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
             </div>
             <div className={styles.List}>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
-            <NomeMusica></NomeMusica>
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+            <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
+           <NomeMusica img={"https://as2.ftcdn.net/v2/jpg/02/11/94/63/1000_F_211946337_ZjeMREmt8WeszPnTJMLSGz7MHIEf6pBV.jpg"} musica={""} album={""} artista={""}/>
+
             </div>
         </ListMusicas>
         </>
