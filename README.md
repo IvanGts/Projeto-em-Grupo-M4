@@ -8,4 +8,5 @@ Criar uma aplicação usando
 + Spring Boot 
 + Spring Data 
 +  Mysql 
+
 que gerencia as mídias disponíveis num serviço de streaming, e também as bibliotecas dos usuários.
