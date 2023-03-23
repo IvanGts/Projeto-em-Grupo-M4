@@ -25,6 +25,8 @@
     font-size: 16px;
         text-align: start;
         font-weight: bold;
+        display: flex;
+        justify-content: space-between;
     }
 
     .card-text {
@@ -33,3 +35,6 @@
         margin: 0%;
     }
 
+    .Toggler {
+      cursor: pointer;
+  }
