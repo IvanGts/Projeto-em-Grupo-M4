@@ -21,9 +21,13 @@ export default function PerfilUsuario(props){
             
         </div>
         <List tituloLista={"Suas playlists"}>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-do-equalizador-da-m%C3%BAsica-vetor-36948272.jpg"}/>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-do-equalizador-da-m%C3%BAsica-vetor-36948272.jpg"}/>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-14861329.jpg"}/>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-14861329.jpg"}/>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-14861329.jpg"}/>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-do-equalizador-da-m%C3%BAsica-vetor-36948272.jpg"}/>
+        <CardsMusica img={"https://thumbs.dreamstime.com/b/fundo-abstrato-do-equalizador-da-m%C3%BAsica-vetor-36948272.jpg"}/>
         </List>
     
         <ListMusicas tituloLista={"Suas Músicas"}>
@@ -40,9 +44,12 @@ export default function PerfilUsuario(props){
         </ListMusicas>
 
         <List tituloLista={"Seus Filmes"}>
-            <CardsFilme></CardsFilme>
-            <CardsFilme></CardsFilme>
-            <CardsFilme></CardsFilme>
+            <CardsFilme img={"https://previews.123rf.com/images/vectorpocket/vectorpocket1801/vectorpocket180100093/92747936-fond-de-cin%C3%A9ma-bleu-avec-des-objets-r%C3%A9alistes-en-3d-popcorn-bande-billets-et-clap-illustration.jpg"}/>
+            <CardsFilme img={"https://previews.123rf.com/images/vectorpocket/vectorpocket1801/vectorpocket180100093/92747936-fond-de-cin%C3%A9ma-bleu-avec-des-objets-r%C3%A9alistes-en-3d-popcorn-bande-billets-et-clap-illustration.jpg"}/>
+            <CardsFilme img={"https://img.freepik.com/vetores-premium/poster-de-cinema-realista-pipoca-balde-fita-de-filme-de-claquete-e-bobina-pipoca-voando-em-movimento_208581-1714.jpg?w=2000"}/>
+            <CardsFilme  img={"https://img.freepik.com/vetores-premium/poster-de-cinema-realista-pipoca-balde-fita-de-filme-de-claquete-e-bobina-pipoca-voando-em-movimento_208581-1714.jpg?w=2000"}/>
+            <CardsFilme  img={"https://www.unioncdmx.mx/wp-content/uploads/2022/08/BOLETOS-CINE-40-PESOS-1024x576.jpg"}/>
+            <CardsFilme />
         </List>
         </>
     )

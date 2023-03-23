@@ -8,6 +8,9 @@ import Cadastro from "./pages/Cadastro/Cadastro";
 import Filmes from './pages/Filmes/Filmes'
 import Footer from './components/Footer/Footer';
 import PerfilUsuario from './pages/PerfilUsuario/PerfilUsuario';
+import Musicas from './pages/Musicas/Musicas';
+import RecuperarSenha from './pages/RecuperarSenha/RecuperarSenha';
+import Playlist from './pages/Playlist/Playlist'
 import {PerfilMusico, PerfilAtor} from './pages/PerfilArtista/PerfilArtista'
 import './services/login'
 import { useEffect, useState } from 'react';
@@ -44,6 +47,9 @@ function App() {
           <Route path='/cadastro' element={<Cadastro/>} />
           <Route path='/filmes' element={<Filmes/>} />
           <Route path='/perfil' element={<PerfilUsuario NomeUsuario={"Alguem"}/>}/>
+          <Route path='/musicas' element={<Musicas/>}/>
+          <Route path='/recuperarsenha' element={<RecuperarSenha/>}/>
+          <Route path='/playlist' element={<Playlist/>}/>
           <Route path='/pArtista' element={<PerfilAtor/>} />
         </Routes>
         <Footer/>

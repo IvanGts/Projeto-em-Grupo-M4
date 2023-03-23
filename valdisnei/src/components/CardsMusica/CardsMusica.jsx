@@ -10,7 +10,7 @@ function CardsMusica() {
   
   return (
     <Card className={styles.card}>
-      <Card.Img className={styles.img} variant="top" src="https://cdn.shopify.com/s/files/1/0522/1610/3083/articles/MILEY_CYRUS_FLOWERS_180x.png?v=1674751436" />
+      <Card.Img className={styles.img} variant="top" src={props.img}/>
       <Card.Body className={styles["card-body"]}>
         <Card.Title className={styles["card-title"]}>Flowers 
         <span ref={target} onClick={() => setShow(!show)} className={styles.Toggler} >▼</span>
