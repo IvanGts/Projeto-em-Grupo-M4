@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import styles from './CardsM.module.css'
 import OpcoesMidia from '../OpcoesMidia/OpcoesMidia';
 
-function CardsMusica() {
+function CardsMusica(props) {
 
   const [show, setShow] = useState(false);
   const target = useRef(null);
