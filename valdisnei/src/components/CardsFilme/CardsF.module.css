@@ -1,0 +1,36 @@
+.card{
+    filter: drop-shadow(10px 7px 6px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 252px;
+    height: 240px;
+    padding: 0px;
+  }
+
+  .img {
+    border-radius: 10px;
+    width: 100%;
+  }
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+    background-color:#7D5CAE;
+    text-align: start;
+    padding: 0 5px;
+    
+  }
+  
+.card-title {
+    font-size: 16px;
+    text-align: start;
+    font-weight: bold;
+    }
+
+    .card-text {
+        color: #D0D0D0;
+        font-size: 16px;
+        margin: 0%;
+    }

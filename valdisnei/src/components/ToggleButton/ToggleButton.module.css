@@ -1,0 +1,42 @@
+.TogglerBox {
+    width: 56px;
+    height: 24px;
+    background: var(--elementos_neutros_escuro);
+    border: 1px solid var(--elementos_neutros_claro);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.Toggler {
+    width: 29px;
+    height: 20px;
+    background: var(--elementos_neutros_claro);
+    border-radius: 100px;
+    margin: auto 3%;
+}
+
+.TogglerBox span, .TogglerIsOn span {
+    color: white;
+    font-size: 12px;
+}
+
+.TogglerIsOn {
+    width: 56px;
+    height: 24px;
+    background: var(--titulo_de_card);
+    border: 1px solid var(--elementos_neutros_claro);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    cursor: pointer;
+}
+

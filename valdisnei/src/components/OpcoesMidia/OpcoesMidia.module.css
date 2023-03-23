@@ -1,0 +1,14 @@
+.Toggler {
+    cursor: pointer;
+}
+
+.OverlayModal {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+.OverlayModal a {
+    color: white;
+}

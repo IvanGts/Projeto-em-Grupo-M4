@@ -1,0 +1,57 @@
+.LoginContainer {
+    box-sizing: border-box;
+    height: 80vh;
+    margin: 6% 10%;
+    border-radius: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    padding: 0 13%;
+}
+
+.LoginContainer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.LoginContainer h1 {
+    padding-bottom: 0.5em;
+}
+
+.LoginContainer span, .LoginContainer input{
+    width: 100%;
+}
+
+.LoginContainer span {
+    margin-top: 1em;
+}
+
+.esqueceuSenha {
+    margin-top: 0.4em;
+    width: 70%;
+    text-align: end;
+}
+
+.LoginBtn {
+    width: 70%;
+    margin: 1em !important;
+}
+
+.linkCadastro {
+    position: relative;
+    top: 4%;
+    display: inline !important;
+}
+
+.linkCadastro *{
+    padding: 0 5px;
+}

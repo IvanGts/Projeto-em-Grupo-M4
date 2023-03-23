@@ -1,0 +1,52 @@
+.Chamada {
+    height: 298px;
+    width: 100%;
+    background: var(--elementos_neutros_escuro);
+    box-shadow: inset 0px 0px 60px 70px rgba(0, 0, 0, 0.51);
+    color: black;
+}
+.ChamaParaCadastro {
+    height: 298px;
+    width: 100%;
+    background: var(--leve_black);
+    box-shadow: inset 0px 0px 60px 70px rgba(0, 0, 0, 0.51);
+    color: var(--leve_white);
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Chamada img {
+    max-width: 95%;
+    box-sizing: border-box;
+    margin: 0 0.5em;
+}
+
+.Chamada h2{
+    max-width: 50%;
+    margin: 1em auto 0;
+}
+
+.ChamaParaCadastro div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+    height: 49px;
+}
+
+.ChamaParaCadastro div input {
+    width: 525px;
+    padding: 1em;
+    border: 0;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.ChamaParaCadastro div button {
+    background-color: var(--elementos_neutros_claro) !important;
+    font-size: medium;
+    border-radius: 0;
+}

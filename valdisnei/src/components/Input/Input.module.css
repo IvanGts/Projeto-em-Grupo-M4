@@ -1,0 +1,35 @@
+.TextInput {
+    background: #F5F5F5;
+    border: 1px solid #C5C5C5;
+    box-shadow: inset 3px 3px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    height: 37px;
+
+    text-align: center;
+}
+
+.Senha {
+    border-radius: 10px 0 0 10px;
+    margin-right: 0 !important;
+}
+
+.Eye {
+    cursor: pointer;
+    height: 100%;
+
+    background: #F5F5F5;
+    border: 1px solid #C5C5C5;
+    border-left: none;
+    box-shadow: inset 0 3px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 0 10px 10px 0;
+
+    padding: 1%;
+}
+
+
+.BoxSenha {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+}
