@@ -1,7 +1,9 @@
 package com.valdisnei.valdisnei.Service;
 
 import com.valdisnei.valdisnei.Bo.UsuarioBo;
+import com.valdisnei.valdisnei.Dto.BibliotecaDto;
 import com.valdisnei.valdisnei.Dto.UsuarioDto;
+import com.valdisnei.valdisnei.Model.Biblioteca;
 import com.valdisnei.valdisnei.Model.Usuario;
 import com.valdisnei.valdisnei.Repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ public class CrudUsuarioService { // dependencia de classes CrudService
     private UsuarioRepository usuarioRepository;
     @Autowired
     private UsuarioBo usuarioBo;
+    @Autowired
+    private CrudBibliotecaService crudBibliotecaService;
     public List<Usuario> pegarTodosUsuarios(){
        return usuarioRepository.findAll();
 
@@ -28,6 +32,10 @@ public class CrudUsuarioService { // dependencia de classes CrudService
 
     public Usuario criarUsuario(UsuarioDto usuarioDto) {
         Usuario usuario = usuarioBo.parseToEntity(usuarioDto,null);
+        usuario.setStatus("Ativo");
+        BibliotecaDto bibliotecaDto = new BibliotecaDto();
+        Biblioteca cbiblioteca = crudBibliotecaService.criarBiblioteca(bibliotecaDto);
+        usuario.setBiblioteca(cbiblioteca);
         usuarioRepository.save(usuario);
         return usuario;
     }

@@ -39,4 +39,7 @@ public class Usuario {
     @JoinColumn(name = "biblioteca_id", referencedColumnName = "id")
     private Biblioteca biblioteca;
 
+    @Column(name = "status")
+    private String status;
+
 }

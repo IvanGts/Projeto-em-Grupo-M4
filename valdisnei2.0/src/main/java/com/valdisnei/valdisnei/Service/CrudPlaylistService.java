@@ -37,4 +37,9 @@ public class CrudPlaylistService {
         playlistRepository.deleteById(id);
     }
 
+    public Playlist pegarPlaylist(int id) {
+        Optional<Playlist> playlist = playlistRepository.findById(id);
+        Playlist p = playlist.orElseThrow();
+        return p;
+    }
 }

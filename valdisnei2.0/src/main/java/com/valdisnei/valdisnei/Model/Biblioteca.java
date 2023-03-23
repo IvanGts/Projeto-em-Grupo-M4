@@ -21,8 +21,7 @@ public class Biblioteca {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id;
-    @OneToOne
-    private Usuario usuario;
+
     @OneToMany(mappedBy = "biblioteca")
     private List<Midia> midia;
 

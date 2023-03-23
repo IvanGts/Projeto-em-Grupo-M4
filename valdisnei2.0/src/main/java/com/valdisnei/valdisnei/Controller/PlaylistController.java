@@ -16,7 +16,7 @@ public class PlaylistController {
     @Autowired
     private CrudPlaylistService crudPlaylistService;
 
-    @PostMapping("/cadastro")
+    @PostMapping("/criar-playlist")
     public ResponseEntity criarPlaylist(@RequestBody PlaylistDto playlistDto){
         Playlist playlist = crudPlaylistService.criarPlaylist(playlistDto);
         return ResponseEntity.ok(playlist);
@@ -27,6 +27,10 @@ public class PlaylistController {
         return crudPlaylistService.pegarTodosPlaylist();
     }
 
+    @GetMapping("{id}")
+    public Playlist pegarPlaylist(@PathVariable int id){
+        return crudPlaylistService.pegarPlaylist(id);
+    }
     @PutMapping("{id}")
     public void editarPlaylist(@RequestBody PlaylistDto playlistDto, @PathVariable int id){
         crudPlaylistService.editarPlaylist(playlistDto, id);
