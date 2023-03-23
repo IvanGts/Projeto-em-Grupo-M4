@@ -18,7 +18,7 @@ function CardsMusica() {
         <Card.Text className={styles["card-text"]}> Miley Cirus</Card.Text>
         <Card.Text className={styles["card-text"]}> Flowers</Card.Text>
       </Card.Body>
-      <OpcoesMidia show={show} setTarget={target}></OpcoesMidia>
+      <OpcoesMidia show={show} target={target}></OpcoesMidia>
     </Card>
   )
 }

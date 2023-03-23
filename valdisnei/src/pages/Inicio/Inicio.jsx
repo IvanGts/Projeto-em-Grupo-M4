@@ -4,11 +4,13 @@ import {Chamada, ChamaParaCadastro} from "../../components/Chamada/Chamada";
 import CardsMusica from "../../components/CardsMusica/CardsMusica";
 import CardsFilme from "../../components/CardsFilme/CardsFilme";
 import Login from "../Login/Login";
+import Filtro from "../../components/Filtro/Filtro";
 
 export function Inicio() {
     return (
         <>
         <Carrossel />
+        
         <List tituloLista={"Músicas mais Ouvidas"}> 
             <CardsMusica></CardsMusica>
             <CardsMusica></CardsMusica>
@@ -38,6 +40,8 @@ export function InicioLogged() {
     return (
         <>
         <Carrossel />
+
+        <Filtro></Filtro>
         <List tituloLista={"Músicas mais Ouvidas"}> 
             <CardsMusica></CardsMusica>
             <CardsMusica></CardsMusica>
