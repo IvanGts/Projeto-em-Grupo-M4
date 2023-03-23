@@ -17,7 +17,7 @@ export default function Playlist(props){
             </div>
             
         </div>
-        <ListMusicas tituloLista={"Suas Músicas"}>
+        <ListMusicas tituloLista={"Link.Suas Músicas"}>
             <div className={styles.List}>
             <NomeMusica></NomeMusica>
             <NomeMusica></NomeMusica>
