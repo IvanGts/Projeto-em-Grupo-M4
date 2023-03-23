@@ -14,7 +14,6 @@ import Playlist from './pages/Playlist/Playlist'
 import {PerfilMusico, PerfilAtor} from './pages/PerfilArtista/PerfilArtista'
 import './services/login'
 import { useEffect, useState } from 'react';
-import { lightTheme, darkTheme } from './services/themes';
 
 const testeIsLogado = localStorage.getItem('logado')=='true';
 function App() {
