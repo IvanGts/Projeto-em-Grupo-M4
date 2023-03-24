@@ -1,5 +1,6 @@
 package com.valdisnei.valdisnei.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,6 +18,7 @@ public class Musica {
     private int id;
     private double duracao;
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "artista_id")
     private Artista artista;
     private int nota;
