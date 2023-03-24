@@ -2,25 +2,40 @@ import {Input, Select, Senha} from "../../components/Input/Input";
 import ButtonV  from "../../components/Button/ButtonValdisnei";
 import imgValdisnei from "../../assets/img/Valdisneiimg.png"
 import styles from "./Cadastro.module.css";
+import { url } from "../../services/api";
+import { useState, useEffect } from "react";
 
 export default function Cadastro() {
     let email = sessionStorage.getItem("email");
+
+    const valoresIniciais = {
+    data_de_nascimento : "",
+    email : "" ,
+    genero : "",
+    nome:  "",
+    senha : "",
+    status : "",
+      };
+
+    const [body, setBody] = useState(valoresIniciais);
+    console.log(body);
+
     return (
         <div className={styles.CadastroContainer}>
             <div className={styles.imgValdisnei}>
                 <img src={imgValdisnei} alt="Valdisnei" />
             </div>
 
-            <div className={styles.Form}>
+            <form method="post" className={styles.Form}>
                 <h2>Toda a mídia que você quiser. <br />Quando você quiser.</h2>
                 <div>
-                    <label for="nome">Nome:</label>
+                    <label htmlFor="nome">Nome:</label>
                     <Input placeholder="Digite seu nome" tipo="text" name="nome" required />
                 
                 </div>
                 
                 <div>
-                    <label for="dataNascimento">Data de Nascimento: </label>
+                    <label htmlFor="dataNascimento">Data de Nascimento: </label>
                     <fieldset id="dataNascimento" name="dataNascimento" className={styles.ManyInputs}>
                         <Input placeholder="Dia" tipo="number" name="dia" min="1" max="31" required style={ {
                             width: "30%"
@@ -46,7 +61,7 @@ export default function Cadastro() {
                 </div>
                 
                 <div>
-                    <label for="celular">Celular:</label>
+                    <label htmlFor="celular">Celular:</label>
                     <fieldset id="celular" name="celular" className={styles.ManyInputs}>
                         <Input placeholder="DDI" tipo="number" name="ddi" required style={{
                             width: "30%"
@@ -56,7 +71,7 @@ export default function Cadastro() {
                 </div>
                 
                 <div>
-                    <label for="genero">Gênero:</label>
+                    <label htmlFor="genero">Gênero:</label>
                     <Select name="genero">
                         <option disabled selected>- Escolha uma opção -</option>
                         <option value="MASC">Masculino</option>
@@ -67,7 +82,7 @@ export default function Cadastro() {
                 </div>
                 
                 <div>
-                    <label for="email">E-mail:</label>
+                    <label htmlFor="email">E-mail:</label>
                     <Input placeholder="Digite seu email" tipo="email" name="email"
                     value={email}
                     required />
@@ -76,12 +91,12 @@ export default function Cadastro() {
                 
                 <div>
                     <div>
-                        <label for="senha">Crie uma senha:</label>
+                        <label htmlFor="senha">Crie uma senha:</label>
                         <Senha placeholder="Digite de 6 a 12 caracteres" tipo="password" name="senha" required />
                     
                     </div>
                     <div>
-                        <label for="confirmeSenha">Confirme sua senha:</label>
+                        <label htmlFor="confirmeSenha">Confirme sua senha:</label>
                         <Senha placeholder="Digite novamente sua senha" name="confirmeSenha" required />
                     
                     </div>
@@ -97,7 +112,7 @@ export default function Cadastro() {
                     <span>Já tem uma conta?</span>
                     <a href="/login">Login</a>
                 </div>
-            </div>
+            </form>
 
         </div>
     )
