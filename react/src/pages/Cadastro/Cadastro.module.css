@@ -14,14 +14,14 @@
 
 .imgValdisnei {
     width: 50%;
-    min-height: 84vh;
 
     background-image: url('../../assets/img/Valdisneiimg.png');
     background-position: center;
     background-size: cover;
-    border-radius: 50px 0 0 50px;
+    border-radius: 48px 0 0 48px;
 }
 .imgValdisnei img {
+    height: 800px;
     visibility: hidden;
 }
 
@@ -48,6 +48,11 @@
     display: flex;
 }
 
+.mensagemErro{
+    font-size: smaller;
+    color: var(--elementos_neutros_escuro);
+    margin: 0;
+}
 
 .Btn {
     width: 50%;
