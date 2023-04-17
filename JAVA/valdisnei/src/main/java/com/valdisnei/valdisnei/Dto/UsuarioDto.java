@@ -9,9 +9,10 @@ import java.util.Date;
 @Setter
 public class UsuarioDto {
     private String nome;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String email;
     private String senha;
     private TipoGenero genero;
+    private int telefone;
 }
 
