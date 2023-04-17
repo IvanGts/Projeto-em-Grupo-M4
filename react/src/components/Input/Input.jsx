@@ -41,6 +41,7 @@ export function Senha(props) {
             alt={mostraSenha?'Mostrar senha':'Ocultar senha'} 
             title={mostraSenha?'Mostrar senha':'Ocultar senha'} 
             className={styles.Eye}
+            style={props.styleEye}
             onClick={()=> setMostraSenha(!mostraSenha)} />            
         </div>
     )
