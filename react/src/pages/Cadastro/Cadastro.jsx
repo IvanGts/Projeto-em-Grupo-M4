@@ -4,6 +4,7 @@ import imgValdisnei from "../../assets/img/Valdisneiimg.png"
 import styles from "./Cadastro.module.css";
 import { url } from "../../services/api";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Cadastro() {
@@ -20,16 +21,97 @@ export default function Cadastro() {
             setErrorMsg({...errorMsg, [alvo.name]:""})
         }
     }
+
+    // Verifica se o e-mail está nos padrões
+    function verificaEmail() {
+        const email = document.querySelector("#email").value
+        const regexEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
+
+        if (!regexEmail.test(email) && email!="") {
+            return [false, "Insira um e-mail válido. Exemplo: example@example.com"]
+        } else {
+            return [true, ""]
+        }
+    }
+
+    // Verifica se o telefone está nos padrões
+    function verificaTelefone() {
+        const numCelularCompleto = document.querySelector("#celular").value;
+        const regexTel = /(?:\(?([1-9][0-9])\)?\s?|([1-9][0-9])\-?)(?:(?:9\d{4})\-?(\d{4}))/
+
+        if (!regexTel.test(numCelularCompleto) && numCelularCompleto!="") {
+            return [false, "Insira um número de celular válido."]
+        } else {
+            return [true, ""]
+        }
+    }
+
+    // Verifica se a senha e confirmação estão ok1\ 
+    function verificaSenha() {
+        const senha = document.querySelector("#senha");
+        const confSenha = document.querySelector("#confirmeSenha")
+
+        if (confSenha.value == "") {
+            return [false, "Preencha este campo!"]
+        } else if (confSenha.value != senha.value) {
+            return [false, "As senhas não batem. Confira se há algum erro de digitação."]
+        } else {
+            return [true, ""]
+        }
+    }
     
     function verificarTodosOsCampos() {
-        const todosCampos = document.querySelector('form');
-    
-        todosCampos.forEach(element => {
-            console.log(element);
-            // if (element) { // Elemento deve ser igual a 'input' ou 'select'
-                
-            // }
-        });
+        const camposUsuario = Object.keys(newUsuario);
+        const camposTelefone = Object.keys(telefone);
+        let camposOk = true
+        let getErrorMessages = {nome:"",dia:"",ano:"",ddi:"",celular:"",genero:"",email:"",senha:"",confirmeSenha:""};
+        
+        // Verificar se e-mail foi preenchido corretamente
+        [camposOk, getErrorMessages.email] = verificaEmail();
+        // Verificar se telefone foi preenchido corretamente
+        [camposOk, getErrorMessages.celular] = verificaTelefone();
+        // Verificar se a senha foi preenchida corretamente
+        [camposOk, getErrorMessages.email] = verificaSenha();
+
+        // Verificar se todos os campos de Usuário estão preenchidos
+        for(const campo of camposUsuario){
+            if (newUsuario[campo]==="") {
+                if (campo=="telefone") {
+                    
+                } else {
+                    getErrorMessages[campo] = "Preencha este campo!";
+                    camposOk = false
+                }
+            } else if (campo == 'dataNascimento') {
+                if (newUsuario[campo]==="01/01/1900") {
+                    if(document.querySelector('#dia').value == "") {
+                        getErrorMessages.dia = "Preencha este campo!";
+                        camposOk = false;
+                    } else if(document.querySelector('#ano').value == "") {
+                        getErrorMessages.ano = "Preencha este campo!";
+                        camposOk = false;
+                    }
+                }
+            }
+        }
+        // Verificar se todos os campos de telefone estão preenchidos
+        for(const campo of camposTelefone){
+            if (campo == "ddd" || campo == "numero"){
+                if (telefone[campo]==="") {
+                    getErrorMessages.celular = "Preencha este campo!";
+                    camposOk = false
+                }
+            } else {
+                if (telefone[campo]==="") {
+                    getErrorMessages[campo] = "Preencha este campo!";
+                    camposOk = false
+                }
+            }
+        }
+        console.log(getErrorMessages);
+        
+        setErrorMsg(getErrorMessages) // Renderizar os erros encontrados
+        return camposOk;
     }
     // ----------------------------------------------------------------------
 
@@ -37,18 +119,13 @@ export default function Cadastro() {
     const [dtNascDia, setDtNascDia] = useState("01");
     const [dtNascMes, setDtNascMes] = useState("01");
     const [dtNascAno, setDtNascAno] = useState("1900");
-    const [formReady, setFormReady] = useState(false);
-    console.log(formReady);
-
-    useEffect(()=> postUsuario(newUsuario), [formReady]);
-
+    
     const telefoneInicial = {
         ddd : "",
         ddi : "",
         numero : ""
     }
     const [telefone, setTelefone] = useState(telefoneInicial)
-        // console.log(telefone);
     const valoresIniciais = {
         dataNascimento : dtNascDia + "/" + dtNascMes + "/" + dtNascAno,
         email : "" ,
@@ -60,12 +137,17 @@ export default function Cadastro() {
     
     const [newUsuario, setnewUsuario] = useState(valoresIniciais);
     useEffect(()=>setnewUsuario({...newUsuario, 'dataNascimento': (dtNascDia + "/" + dtNascMes + "/" + dtNascAno)}), [dtNascDia, dtNascMes, dtNascAno])
+
+    const [formReady, setFormReady] = useState(false);
+    console.log(formReady);
     useEffect(()=>setFormReady(!formReady),[newUsuario.telefone])
     
     const postUsuario = (body) => {
         url.post('/usuario/cadastro', body)
         .catch((erro) => console.error(erro))
     };
+    
+    useEffect(()=> postUsuario(newUsuario), [formReady]);
     
     const postTelefone = (body) => {
     url.post('/telefone', body)
@@ -155,12 +237,17 @@ export default function Cadastro() {
                                 handleOnChange(e, setTelefone, telefone)}
                             } />
                         <Input placeholder="(XX XXXXX-XXXX)" tipo="telephone" name="celular" required onChange={(e) => {
-                            verificarCampoVazio(e,"Preencha o número do seu celular!")
                             const numeroTelefone = e.target.value.split(/\D+/).join("");
                             const ddd = numeroTelefone.slice(0,2);
                             const cel = numeroTelefone.slice(2);
-
+                            
                             setTelefone({...telefone, ["ddd"]: ddd, ["numero"]: cel})
+                            const confirm = verificaTelefone();
+                            if (confirm[1]!="") {
+                                setErrorMsg({...errorMsg, celular: confirm[1]})
+                            } else {
+                                verificarCampoVazio(e,"Preencha o número do seu celular!")
+                            }
 
                         }} /> 
                     </fieldset>
@@ -169,7 +256,14 @@ export default function Cadastro() {
                 
                 <div>
                     <label htmlFor="genero">Gênero:</label>
-                    <Select name="genero" onChange={(e) => handleOnChange(e, setnewUsuario, newUsuario)}>
+                    <Select name="genero" onChange={(e) => {
+                        if (e.target.value != '- Escolha uma opção -') {
+                            handleOnChange(e, setnewUsuario, newUsuario)
+                            setErrorMsg({...errorMsg, genero:""})
+                        } else {
+                            verificarCampoVazio(e)
+                        }
+                        }}>
                         <option disabled selected>- Escolha uma opção -</option>
                         <option value="MASC">Masculino</option>
                         <option value="FEM">Feminino</option>
@@ -183,7 +277,12 @@ export default function Cadastro() {
                     <Input placeholder="Digite seu email" tipo="email" name="email"
                     value={email}
                     required onChange={(e) => {
-                        verificarCampoVazio(e)
+                        const confirm = verificaEmail();
+                        if (confirm[1]!="") {
+                            setErrorMsg({...errorMsg, email: confirm[1]})
+                        } else {
+                            verificarCampoVazio(e)
+                        }
                         handleOnChange(e, setnewUsuario, newUsuario)
                         }} />
                     <p className={styles.mensagemErro}>&nbsp;{errorMsg.email}&nbsp;</p>
@@ -192,17 +291,25 @@ export default function Cadastro() {
                 <div>
                     <div>
                         <label htmlFor="senha">Crie uma senha:</label>
-                        <Senha placeholder="Digite de 6 a 12 caracteres" tipo="password" name="senha" required onChange={(e) => {
-                            verificarCampoVazio(e)
+                        <Senha placeholder="Digite de 6 a 12 caracteres" tipo="password" name="senha" required styleEye={
+                            {height: "inherit"} }
+                            onChange={(e) => {
+                            if((e.target.value.length < 6 && e.target.value != "") || (e.target.length > 12 && e.target.value != "")) {
+                                setErrorMsg({...errorMsg, senha: "Sua senha dever ter de 6 a 12 caracteres!"})
+                            } else {
+                                verificarCampoVazio(e)
+                            }
                             handleOnChange(e, setnewUsuario, newUsuario)
                             }} />
                         <p className={styles.mensagemErro}>&nbsp;{errorMsg.senha}&nbsp;</p>
                     </div>
                     <div>
                         <label htmlFor="confirmeSenha">Confirme sua senha:</label>
-                        <Senha placeholder="Digite novamente sua senha" name="confirmeSenha" 
+                        <Senha placeholder="Digite novamente sua senha" name="confirmeSenha" styleEye={
+                            {height: "inherit"} }
                         onChange={(e)=>{
-                            verificarCampoVazio(e)
+                            const confirm = verificaSenha();
+                            setErrorMsg({...errorMsg, confirmeSenha: confirm[1]})
                         }}
                         required />
                         <p className={styles.mensagemErro}>&nbsp;{errorMsg.confirmeSenha}&nbsp;</p>
@@ -212,8 +319,14 @@ export default function Cadastro() {
                 <ButtonV textoBotao={"Cadastrar"} classe={styles.Btn}
                 click={
                     (e)=>{
-                        sessionStorage.clear();
-                        postTelefone(telefone);
+                        let formValidado = verificarTodosOsCampos()
+
+                        console.log(formValidado);
+                        if (formValidado) {
+                            sessionStorage.clear();
+                            postTelefone(telefone);
+                        }
+                        
                 }
                 }
                 ></ButtonV>
