@@ -108,7 +108,6 @@ export default function Cadastro() {
                 }
             }
         }
-        console.log(getErrorMessages);
         
         setErrorMsg(getErrorMessages) // Renderizar os erros encontrados
         return camposOk;
@@ -139,7 +138,7 @@ export default function Cadastro() {
     useEffect(()=>setnewUsuario({...newUsuario, 'dataNascimento': (dtNascDia + "/" + dtNascMes + "/" + dtNascAno)}), [dtNascDia, dtNascMes, dtNascAno])
 
     const [formReady, setFormReady] = useState(false);
-    console.log(formReady);
+    // console.log(formReady);
     useEffect(()=>setFormReady(!formReady),[newUsuario.telefone])
     
     const postUsuario = (body) => {
@@ -321,7 +320,6 @@ export default function Cadastro() {
                     (e)=>{
                         let formValidado = verificarTodosOsCampos()
 
-                        console.log(formValidado);
                         if (formValidado) {
                             sessionStorage.clear();
                             postTelefone(telefone);
