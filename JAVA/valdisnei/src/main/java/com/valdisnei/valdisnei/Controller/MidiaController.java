@@ -16,8 +16,6 @@ import java.util.List;
 public class MidiaController {
     @Autowired
     private CrudMidiaService crudMidiaService;
-    @Autowired
-    private CrudPlaylistService crudPlaylistService;
     @PostMapping("/cadastro")
     public ResponseEntity criarMidia(@RequestBody MidiaDto midiaDto){
         Midia midia = crudMidiaService.criarMidia(midiaDto);
@@ -32,6 +30,10 @@ public class MidiaController {
     @GetMapping("/todos")
     public List<Midia> pegarTodasMidias(){
         return crudMidiaService.pegarTodasMidias();
+    }
+    @GetMapping("/{id}")
+    public Midia pegarMidia(@PathVariable int id){
+        return crudMidiaService.pegarMidia(id);
     }
     @GetMapping("/aleatorios")
     public List<Midia> pegarTodasMidiasAleatoria(){

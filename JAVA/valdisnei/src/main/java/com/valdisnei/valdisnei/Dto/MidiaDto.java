@@ -13,4 +13,5 @@ public class MidiaDto {
     private MusicaDto musicaDto;
     private FilmeDto filmeDto;
     private BibliotecaDto bibliotecaDto;
+    private String image;
 }

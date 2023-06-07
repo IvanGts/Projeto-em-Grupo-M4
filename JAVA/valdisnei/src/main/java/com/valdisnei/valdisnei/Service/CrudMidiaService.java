@@ -5,10 +5,10 @@ import com.valdisnei.valdisnei.Dto.MidiaDto;
 import com.valdisnei.valdisnei.Model.Midia;
 import com.valdisnei.valdisnei.Model.Playlist;
 import com.valdisnei.valdisnei.Model.PlaylistMidia;
+import com.valdisnei.valdisnei.Repository.MidiaImage;
 import com.valdisnei.valdisnei.Repository.MidiaRepository;
 import com.valdisnei.valdisnei.Repository.PlaylistMidiaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -24,6 +24,8 @@ public class CrudMidiaService { // dependencia de classes CrudService
     private CrudPlaylistService crudPlaylistService;
     @Autowired
     private PlaylistMidiaRepository playlistMidiaRepository;
+    @Autowired
+    private MidiaImage midiaImage;
 
     public List<Midia> pegarTodasMidias(){
         return midiaRepository.findAll();
@@ -61,9 +63,14 @@ public class CrudMidiaService { // dependencia de classes CrudService
         playlistMidiaRepository.save(playlistMidia);
     }
 
-    private Midia pegarMidia(int idMidia) {
+    public Midia pegarMidia(int idMidia) {
         Optional<Midia> midia = midiaRepository.findById(idMidia);
         Midia midia1 = midia.orElseThrow();
+        String tipoMidia = midia1.getMusica()!=null?"Musica":"Filme";
+
+        String image = midiaImage.mostrarUrlDe(idMidia, tipoMidia);
+
+        midia1.setImage(image);
 
         return midia1;
     }

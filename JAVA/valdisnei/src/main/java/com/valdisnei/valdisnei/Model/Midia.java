@@ -25,11 +25,15 @@ public class Midia {
     private int ano;
     @Column(name="genero")
     private String genero;
-
+    @Column(name="image_url")
+    private String image;
+    
+    // Propriedade pode não ser necessária.
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "playlist_id")
     private Playlist playlist;
+
     @OneToOne
     @JsonIgnore
     @JoinColumn(name ="musica", referencedColumnName = "id")
