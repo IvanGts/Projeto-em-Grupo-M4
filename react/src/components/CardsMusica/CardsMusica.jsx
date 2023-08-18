@@ -7,6 +7,13 @@ function CardsMusica(props) {
 
   const [show, setShow] = useState(false);
   const target = useRef(null);
+
+  document.addEventListener("click", (event)=>{
+    if (show == true &&
+        !target.current.contains(event.target)) {
+      setShow(false);
+    }
+  })
   
   return (
     <Card className={styles.card}>
