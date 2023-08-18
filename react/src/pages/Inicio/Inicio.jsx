@@ -7,27 +7,53 @@ import Login from "../Login/Login";
 import Filtro from "../../components/Filtro/Filtro";
 import { url } from "../../services/api";
 import { useState, useEffect } from "react";
+import albumArtDefault from "../../assets/img/Capa do Album_default.png";
+import movieArtDefault from "../../assets/img/Banner do Filme_default.png"
+
+const musicList = [
+    {img: albumArtDefault, titulo: "Flowers", artista: "Miley Cirus", album: "Flowers"},
+    {img: albumArtDefault, titulo: "Flowers", artista: "Miley Cirus", album: "Flowers"},
+    {img: albumArtDefault, titulo: "Flowers", artista: "Miley Cirus", album: "Flowers"},
+    {img: albumArtDefault, titulo: "Flowers", artista: "Miley Cirus", album: "Flowers"},
+    {img: albumArtDefault, titulo: "Flowers", artista: "Miley Cirus", album: "Flowers"},
+    {img: albumArtDefault, titulo: "Flowers", artista: "Miley Cirus", album: "Flowers"}
+]
+
+function musicCard(musica) {
+        return (<CardsMusica img={musica.img} titulo={musica.titulo}
+            album={musica.album} artista={musica.artista} />)
+    }
+
+const movieList = [
+    {img: movieArtDefault, titulo: "As Crônicas de Nárnia"},
+    {img: movieArtDefault, titulo: "As Crônicas de Nárnia"},
+    {img: movieArtDefault, titulo: "As Crônicas de Nárnia"},
+    {img: movieArtDefault, titulo: "As Crônicas de Nárnia"},
+    {img: movieArtDefault, titulo: "As Crônicas de Nárnia"},
+    {img: movieArtDefault, titulo: "As Crônicas de Nárnia"}
+]
+
+function movieCard(filme) {
+    return (<CardsFilme img={filme.img} titulo={filme.titulo} />)
+}
 
 export function Inicio() {
+
     return (
         <>
         <Carrossel />
         
         <List tituloLista={"Músicas mais Ouvidas"}> 
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
-            <CardsMusica></CardsMusica>
+            {
+                musicList.map(musica => musicCard(musica)
+                )
+            }
         </List>
         <List tituloLista={"Filmes mais Assistidos"}>
-            <CardsFilme></CardsFilme>
-            <CardsFilme></CardsFilme>
-            <CardsFilme></CardsFilme>
-            <CardsFilme></CardsFilme>
-            <CardsFilme></CardsFilme>
+            {
+                movieList.map(filme => movieCard(filme)
+                )
+            }
         </List>
 
         <Chamada />
