@@ -1,5 +1,5 @@
 .card{
-    filter: drop-shadow(10px 7px 6px rgba(0, 0, 0, 0.25));
+    box-shadow: 7px 7px 6px rgba(132, 132, 132, 0.50);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
