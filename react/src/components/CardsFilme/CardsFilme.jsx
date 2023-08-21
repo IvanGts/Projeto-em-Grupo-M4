@@ -6,7 +6,7 @@ function CardsFilme(props) {
     <Card className={styles.card}>
       <Card.Img className={styles.img} variant="top" src={props.img} />
       <Card.Body className={styles["card-body"]}>
-        <Card.Title className={styles["card-title"]}>{props.titulodofilme}</Card.Title>
+        <Card.Title className={styles["card-title"]}>{props.titulo}</Card.Title>
       </Card.Body>
     </Card>
   )

@@ -12,3 +12,7 @@
 .OverlayModal a {
     color: white;
 }
+
+.OverlayModal a:hover{
+    color: #b9bcff;
+}
