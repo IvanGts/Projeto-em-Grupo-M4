@@ -4,7 +4,6 @@ import com.valdisnei.valdisnei.Enum.TipoGenero;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
 @Getter
 @Setter
 public class UsuarioDto {

@@ -20,4 +20,19 @@ public class MusicaBo {
 
         return pEntity;
     }
+
+    public MusicaDto parseToDto(MusicaDto dto, Musica pEntity) {
+        if (dto == null)
+            dto = new MusicaDto();
+        
+        if (pEntity == null)
+            return dto;
+
+        dto.setDuracao(pEntity.getDuracao());
+        dto.setArtista(pEntity.getArtista());
+
+
+
+        return dto;
+    }
 }

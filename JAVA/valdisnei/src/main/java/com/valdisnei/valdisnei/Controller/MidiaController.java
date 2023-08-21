@@ -22,18 +22,19 @@ public class MidiaController {
         return ResponseEntity.ok(midia);
     }
 
-    @PostMapping("/addMidia/{idMidia}/Playlist/{idPlaylist}")
-    public void addMidiaPlaylist(@PathVariable int idMidia,@PathVariable int idPlaylist){
-    crudMidiaService.addMidiaPlaylist(idMidia,idPlaylist);
-    }
+    // @PostMapping("/addMidia/{idMidia}/Playlist/{idPlaylist}")
+    // public void addMidiaPlaylist(@PathVariable int idMidia,@PathVariable int idPlaylist){
+    // crudMidiaService.addMidiaPlaylist(idMidia,idPlaylist);
+    // }
 
     @GetMapping("/todos")
     public List<Midia> pegarTodasMidias(){
         return crudMidiaService.pegarTodasMidias();
     }
     @GetMapping("/{id}")
-    public Midia pegarMidia(@PathVariable int id){
+    public MidiaDto pegarMidia(@PathVariable int id){
         return crudMidiaService.pegarMidia(id);
+
     }
     @GetMapping("/aleatorios")
     public List<Midia> pegarTodasMidiasAleatoria(){

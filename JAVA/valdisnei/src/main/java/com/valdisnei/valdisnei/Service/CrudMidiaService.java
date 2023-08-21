@@ -24,8 +24,7 @@ public class CrudMidiaService { // dependencia de classes CrudService
     private CrudPlaylistService crudPlaylistService;
     @Autowired
     private PlaylistMidiaRepository playlistMidiaRepository;
-    @Autowired
-    private MidiaImage midiaImage;
+    
 
     public List<Midia> pegarTodasMidias(){
         return midiaRepository.findAll();
@@ -54,24 +53,19 @@ public class CrudMidiaService { // dependencia de classes CrudService
         return midias;
     }
 
-    public void addMidiaPlaylist(int idMidia, int idPlaylist) {
-        Playlist idPlaylist1 = crudPlaylistService.pegarPlaylist(idPlaylist);
-        Midia idMidia1 = this.pegarMidia(idMidia);
-        PlaylistMidia playlistMidia = new PlaylistMidia();
-        playlistMidia.setPlaylist(idPlaylist1);
-        playlistMidia.setMidia(idMidia1);
-        playlistMidiaRepository.save(playlistMidia);
-    }
+    // public void addMidiaPlaylist(int idMidia, int idPlaylist) {
+    //     Playlist idPlaylist1 = crudPlaylistService.pegarPlaylist(idPlaylist);
+    //     Midia idMidia1 = this.pegarMidia(idMidia);
+    //     PlaylistMidia playlistMidia = new PlaylistMidia();
+    //     playlistMidia.setPlaylist(idPlaylist1);
+    //     playlistMidia.setMidia(idMidia1);
+    //     playlistMidiaRepository.save(playlistMidia);
+    // }
 
-    public Midia pegarMidia(int idMidia) {
+    public MidiaDto pegarMidia(int idMidia) {
         Optional<Midia> midia = midiaRepository.findById(idMidia);
-        Midia midia1 = midia.orElseThrow();
-        String tipoMidia = midia1.getMusica()!=null?"Musica":"Filme";
-
-        String image = midiaImage.mostrarUrlDe(idMidia, tipoMidia);
-
-        midia1.setImage(image);
-
-        return midia1;
+        Midia midiaFound = midia.orElseThrow();
+        MidiaDto dMidiaDto = midiaBo.parseToDto(null, midiaFound);
+        return dMidiaDto;
     }
 }
